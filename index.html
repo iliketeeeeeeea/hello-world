@@ -1,11 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<title>
-hello world
-</title>
-</head>
-<body>
-<h1 style="color:red";>Hello World!</h1>
-</body>
+  <head>
+    <title>Lasagna Boss</title>
+    <style>
+    #hr {
+    margin-top: 50px
+    </style>
+    <style>
+      #button {
+      background-color: black
+          color: white
+      </style>
+  </head>
+  <body bgcolor="#696969">
+      <h1 align='center' style='color:white'>Сколько тебе лет?</h1>
+      <p align='center' style='color:white'>Каждый день мы просыпаемся по утрам и делаем одно и то же, но задумывался ли ты, сколько тебе лет на данный момент?</p>
+      <hr id='hr'>
+      
+      <h3 align='center' style='color:white'>Не благодари, друг. С помощью этого гениального скрипта, над которым я трудился несколько лет, ты теперь сможешь докопаться до истины!</h3>
+      <input style='color:white' id='year' placeholder="Твой год рождения">
+      <button id="button" onclick="func()">рассчитать</button>
+      <h5 style='color:white'>Тебе</h5>
+      <p style='color:white' id='result'></p>
+
+     
+      <script>
+       function func(){
+           var num1 = Number(document.getElementById("year").value);
+           var result = 2021 - num1;
+           if (result == 1) {
+            document.getElementById("result").innerHTML = result + " год";  
+           }
+           else if (result < 5) {
+          document.getElementById("result").innerHTML = result + " года";
+           }
+           else    {
+          document.getElementById("result").innerHTML = result + " лет";
+           }
+          }
+      </script>
+  </body>
 </html>
